@@ -8,9 +8,10 @@
 
     <!-- spawn hexapid -->
     <include file="$(find hexapod_description)/launch/spawn.launch"/>
+    <node name="walker" pkg="hexapod_description" type="walker.py" />
 
     <!-- spawn colored cube -->
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-        args="-file $(find hexapod_description)/urdf/target.urdf -urdf -model target -z 0.5 -x 0.5 -y 0.5" />
+        args="-file $(find hexapod_description)/urdf/target.urdf -urdf -model target -z 0.5 -x 0.25 -y -1.5" />
 
 </launch>
