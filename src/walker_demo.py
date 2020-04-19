@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import rospy
-from phantomx_gazebo.phantomx import PhantomX
+from phantomx import PhantomX
 
 
 if __name__ == '__main__':

@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 import rospy
-from phantomx_gazebo.phantomx import PhantomX
+from phantomx import PhantomX
 from geometry_msgs.msg import PoseStamped, Pose, Point, Quaternion, Vector3
 
 TARGET_POS_TOPIC = '/object'
-K = 1
+K = 0.5
 
 def pose_callback(pose_stamped):
     y = pose_stamped.pose.position.y
