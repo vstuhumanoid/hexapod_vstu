@@ -15,15 +15,17 @@
 
     <!-- opencv detector -->
     <node name="detector" pkg="mono_object_finder" type="detector.py"
-        args="--config $(arg cfg_file) --gui full" output="screen">
+        args="--config $(arg cfg_file) --gui base" output="screen">
         <remap from="/image" to="/hexapod/camera1/image_raw"/>
         <remap from="/camera_info" to="/hexapod/camera1/camera_info"/>
     </node>
 
+    <!-- Walk to target -->
+    <node name="controller" pkg="hexapod_description" type="opencv_walker.py"/>
+
     <!-- spawn colored cube -->
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
         args="-file $(find hexapod_description)/urdf/target.urdf -urdf -model target -z 0.5 -x 1 -y 0" />
-
 
     <!-- rviz -->
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hexapod_description)/config/config_gazebo.rviz" if="$(arg rviz)"/>
