@@ -1,0 +1,8 @@
+blur: !!python/object:settings.Settings {i: 6, max: 21, value: 3}
+h_max: !!python/object:settings.Settings {i: 1, max: 180, value: 31}
+h_min: !!python/object:settings.Settings {i: 0, max: 180, value: 0}
+min_size: !!python/object:settings.Settings {i: 7, max: 5000, value: 60}
+s_max: !!python/object:settings.Settings {i: 3, max: 255, value: 255}
+s_min: !!python/object:settings.Settings {i: 2, max: 255, value: 125}
+v_max: !!python/object:settings.Settings {i: 5, max: 255, value: 255}
+v_min: !!python/object:settings.Settings {i: 4, max: 255, value: 0}

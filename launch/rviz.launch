@@ -6,7 +6,7 @@
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
 
     <!-- Show in Rviz -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hexapod_description)/launch/config.rviz" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hexapod_description)/config/config_view.rviz" />
 
     <!-- Send joint values -->
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <launch>
-    <arg name="cfg_file" value="$(find phantomx_gazebo)/cfg/config.yaml"/>
+    <arg name="cfg_file" value="$(find hexapod_description)/config/cv_config.yaml"/>
+    <arg name="rviz" default="false"/>
 
     <!-- launch gazebo -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -14,13 +15,17 @@
 
     <!-- opencv detector -->
     <node name="detector" pkg="mono_object_finder" type="detector.py"
-        args="--config $(arg cfg_file) --gui base" output="screen">
+        args="--config $(arg cfg_file) --gui full" output="screen">
         <remap from="/image" to="/hexapod/camera1/image_raw"/>
-        <remap from="/image" to="/hexapod/camera1/camera_info"/>
+        <remap from="/camera_info" to="/hexapod/camera1/camera_info"/>
     </node>
 
     <!-- spawn colored cube -->
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-        args="-file $(find hexapod_description)/urdf/target.urdf -urdf -model target -z 0.5 -x 0.25 -y -1.5" />
+        args="-file $(find hexapod_description)/urdf/target.urdf -urdf -model target -z 0.5 -x 1 -y 0" />
+
+
+    <!-- rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hexapod_description)/config/config_gazebo.rviz" if="$(arg rviz)"/>
 
 </launch>
