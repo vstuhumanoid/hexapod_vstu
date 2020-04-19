@@ -4,6 +4,7 @@
 
     <xacro:include filename="$(find hexapod_description)/urdf/links_joints.xacro" />
     <xacro:include filename="$(find hexapod_description)/urdf/robot_parameters.xacro" />
+    <xacro:include filename="$(find hexapod_description)/urdf/camera.xacro" />
 
     <link name="base_link"/>
 
@@ -12,6 +13,8 @@
         <child link="body"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
     </joint>
+
+    <xacro:my_camera xyz="0 0.1 0" rpy="0 0 ${pi/2}"/>
 
     <m_link_mesh name="body"
                 origin_rpy="0 0 0" origin_xyz="0 0 0"
