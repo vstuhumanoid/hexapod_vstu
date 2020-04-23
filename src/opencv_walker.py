@@ -5,7 +5,7 @@ from phantomx import PhantomX
 from geometry_msgs.msg import PoseStamped, Pose, Point, Quaternion, Vector3
 
 TARGET_POS_TOPIC = '/object'
-K = 0.5
+K = 2.0
 
 def pose_callback(pose_stamped):
     y = pose_stamped.pose.position.y

@@ -25,9 +25,9 @@
 
     <!-- spawn colored cube -->
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-        args="-file $(find hexapod_description)/urdf/target.urdf -urdf -model target -z 0.5 -x 1 -y 0" />
+        args="-file $(find hexapod_description)/urdf/target.urdf -urdf -model target -z 0.5 -x 1 -y 0.25" />
 
     <!-- rviz -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hexapod_description)/config/config_gazebo.rviz" if="$(arg rviz)"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hexapod_description)/config/config_trajectory.rviz" if="$(arg rviz)"/>
 
 </launch>
