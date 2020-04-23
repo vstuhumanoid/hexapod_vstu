@@ -1,22 +1,24 @@
+# hexapod_description
+This is modified version of [phantomx by  HumaRobotics](https://github.com/HumaRobotics/phantomx_description)
+
+Changes:
+ - added simple computer vision which allows robot move to the colored object
+ - model was replaced with hexapod robot from VSTU university project
+ - all repos (gazebo, description, control) are merged in one
+
 ## Install
 
-Clone in your catkin workspace and catkin_make it.
-Make sure you also have the following package in your workspace
-* phantomx_control: https://github.com/HumaRobotics/phantomx_gazebo
+Clone this repo and all dependencies in your catkin workspace and catkin_make it.
+
+Dependencies:
+ - [opencv-mono-detector](https://github.com/Garrus007/opencv-mono-detector)
 
 ## Usage
 
-For working with /hexapod/ you need change /phantomx/ namespace in walker.py and walker_demo.py
-
-You can launch the simulation with:
-
-    roslaunch hexapod_description spawn.launch
-    
-PRESS PLAY IN GAZEBO ONLY WHEN EVERYTHING IS LOADED (wait for controllers)
-
-You can run a walk demo with:
-
-    rosrun phantomx_gazebo walker_demo.py
+Launch Gazebo simulation, Computer Vision and walking to the colored object:
+```bash
+$ roslaunch hexapod_description gazebo.launch
+```
 
 ## ROS API
 
