@@ -12,6 +12,7 @@ Clone this repo and all dependencies in your catkin workspace and catkin_make it
 
 Dependencies:
  - [opencv-mono-detector](https://github.com/Garrus007/opencv-mono-detector)
+ - [effort_controllers](http://wiki.ros.org/effort_controllers)
 
 ## Usage
 
