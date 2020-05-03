@@ -26,4 +26,28 @@
     <xacro:property name="link_16_name" value="c1_lr" />
     <xacro:property name="link_17_name" value="thigh_lr" />
     <xacro:property name="link_18_name" value="tibia_lr" />
+
+    <!-- Attachments params -->
+    
+    <xacro:property name="body_legs_f_dy" value="0.066" />
+    <xacro:property name="body_legs_m_dy" value="0.006" />
+    <xacro:property name="body_legs_r_dy" value="0.078" />
+    <xacro:property name="body_legs_dx" value="0.04" />
+    <xacro:property name="body_legs_dz" value="0.0203" />
+
+    <xacro:property name="coxa_dx" value="0.033" />
+    <xacro:property name="coxa_dy" value="0.007" />
+    <xacro:property name="coxa_dz" value="0.0315" />
+
+    <xacro:property name="coxa_thigh_dx" value="0.008" />
+    <xacro:property name="coxa_thigh_dy" value="0.0123" />
+    <xacro:property name="coxa_thigh_dz" value="0.011" />
+
+    <xacro:property name="thigh_dx" value="0.02" />
+    <xacro:property name="thigh_dy" value="0.007" />
+    <xacro:property name="thigh_dz" value="0.032" />
+
+    <xacro:property name="tibia_dx" value="0.008" />
+    <xacro:property name="tibia_dy" value="0.023" />
+    <xacro:property name="tibia_dz" value="0.0123" />
 </robot>

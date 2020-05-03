@@ -10,76 +10,76 @@ joint_state_controller:
 j_c1_rf_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_c1_rf
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_c1_lf_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_c1_lf
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_c1_rm_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_c1_rm
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_c1_lm_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_c1_lm
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_c1_rr_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_c1_rr
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_c1_lr_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_c1_lr
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # ============================================================
-# femur controllers
+# thigh controllers
 
 # Position Controllers ---------------------------------------
 j_thigh_rf_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_thigh_rf
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_thigh_lf_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_thigh_lf
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_thigh_rm_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_thigh_rm
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_thigh_lm_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_thigh_lm
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_thigh_rr_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_thigh_rr
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_thigh_lr_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_thigh_lr
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # ============================================================
 # tibia controllers
@@ -88,34 +88,34 @@ j_thigh_lr_position_controller:
 j_tibia_rf_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_tibia_rf
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_tibia_lf_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_tibia_lf
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_tibia_rm_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_tibia_rm
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_tibia_lm_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_tibia_lm
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_tibia_rr_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_tibia_rr
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
 
 # Position Controllers ---------------------------------------
 j_tibia_lr_position_controller:
   type: effort_controllers/JointPositionController
   joint: j_tibia_lr
-  pid: {p: 100.0, i: 0.01, d: 10.0}
+  pid: {p: 1000.0, i: 0.01, d: 1.0}
