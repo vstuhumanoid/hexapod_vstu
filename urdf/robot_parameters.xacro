@@ -29,7 +29,7 @@
 
     <!-- Attachments params -->
     
-    <xacro:property name="body_legs_f_dy" value="0.066" />
+    <xacro:property name="body_legs_f_dy" value="-0.066" />
     <xacro:property name="body_legs_m_dy" value="0.006" />
     <xacro:property name="body_legs_r_dy" value="0.078" />
     <xacro:property name="body_legs_dx" value="0.04" />
