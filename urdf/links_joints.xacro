@@ -33,13 +33,13 @@
             <collision>
                 <origin rpy="${origin_rpy}" xyz="${origin_xyz}" />
                 <geometry>
-                    <mesh filename="${mesh_file}" scale="${mesh_scale}" />
+                    <mesh filename="${mesh_file}_coll.stl" scale="${mesh_scale}" />
                 </geometry>
             </collision>
             <visual>
                 <origin rpy="${origin_rpy}" xyz="${origin_xyz}" />
                 <geometry>
-                    <mesh filename="${mesh_file}" scale="${mesh_scale}" />
+                    <mesh filename="${mesh_file}.stl" scale="${mesh_scale}" />
                 </geometry>
                 <material name="light_black" />
             </visual>

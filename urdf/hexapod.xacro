@@ -23,12 +23,13 @@
     </joint>
 
     <m_link_mesh name="body"
-                origin_rpy="0 0 0" origin_xyz="0 0 0"
+                origin_rpy="0 0 0" 
+                origin_xyz="0 0 0"
                 mass="0.97559947"
                 ixx="3.1081800" ixy="-0.25460189" ixz="2.0318174"
                 iyy="6.3787776" iyz="0.16417863"
                 izz="5.3316425"
-                mesh_file="package://hexapod_description/meshes/body.stl"
+                mesh_file="package://hexapod_description/meshes/body"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 1 (rf) begin description -->
@@ -38,16 +39,19 @@
     <m_joint    name="${link_01_name}" 
                 type="revolute" 
                 axis_xyz="0 0 1"
-                origin_rpy="0 0 0" origin_xyz="-${body_legs_dx} -${body_legs_f_dy} ${body_legs_dz}" 
-                parent="body" child="${link_01_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="-${body_legs_dx} -${body_legs_f_dy} ${body_legs_dz}" 
+                parent="body" 
+                child="${link_01_name}" />
 
     <m_link_mesh name="${link_01_name}"
-                origin_rpy="${pi} 0 0" origin_xyz="-${coxa_dx} -${coxa_dy} -${coxa_dz}"
+                origin_rpy="${pi} 0 0" 
+                origin_xyz="-${coxa_dx} -${coxa_dy} -${coxa_dz}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049"
                 iyy="0.0081915737" iyz="-0.000019223094"
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/coxa_r.stl"
+                mesh_file="package://hexapod_description/meshes/coxa_r"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 1 (rf) thigh description -->
@@ -55,16 +59,19 @@
     <m_joint    name="${link_02_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 ${pi}" origin_xyz="-${coxa_dx - coxa_thigh_dx} ${coxa_dy - coxa_thigh_dy} -${coxa_dz - coxa_thigh_dz}" 
-                parent="${link_01_name}" child="${link_02_name}" />
+                origin_rpy="0 0 ${pi}" 
+                origin_xyz="-${coxa_dx - coxa_thigh_dx} ${coxa_dy - coxa_thigh_dy} -${coxa_dz - coxa_thigh_dz}" 
+                parent="${link_01_name}" 
+                child="${link_02_name}" />
 
     <m_link_mesh name="${link_02_name}"
-                origin_rpy="${pi/2} 0 0" origin_xyz="${thigh_dx} -${thigh_dz - coxa_thigh_dy} -${thigh_dy}"
+                origin_rpy="${pi/2} 0 0" 
+                origin_xyz="${thigh_dx} -${thigh_dz - coxa_thigh_dy} -${thigh_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/thigh.stl"
+                mesh_file="package://hexapod_description/meshes/thigh"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 1 (rf) tibia description -->
@@ -72,16 +79,19 @@
     <m_joint    name="${link_03_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="${thigh_dx * 2} -${thigh_dz - tibia_dz - 0.001} 0"
-                parent="${link_02_name}" child="${link_03_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="${thigh_dx * 2} -${thigh_dz - tibia_dz - 0.001} 0"
+                parent="${link_02_name}" 
+                child="${link_03_name}" />
 
     <m_link_mesh name="${link_03_name}"
-                origin_rpy="${3*pi/2} 0 ${pi}" origin_xyz="-${tibia_dx} ${thigh_dz - tibia_dz} ${tibia_dy}"
+                origin_rpy="${3*pi/2} 0 ${pi}" 
+                origin_xyz="-${tibia_dx} ${thigh_dz - tibia_dz} ${tibia_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/tibia_r.stl"
+                mesh_file="package://hexapod_description/meshes/tibia_r"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 2 (lf) begin description -->
@@ -91,16 +101,19 @@
     <m_joint    name="${link_04_name}" 
                 type="revolute" 
                 axis_xyz="0 0 1"
-                origin_rpy="0 0 0" origin_xyz="${body_legs_dx} -${body_legs_f_dy} -${coxa_dz - body_legs_dz}" 
-                parent="${link_00_name}" child="${link_04_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="${body_legs_dx} -${body_legs_f_dy} ${body_legs_dz}" 
+                parent="${link_00_name}" 
+                child="${link_04_name}" />
 
     <m_link_mesh name="${link_04_name}"
-                origin_rpy="${pi} 0 0" origin_xyz="${coxa_dx} -${coxa_dy} 0"
+                origin_rpy="${pi} 0 0" 
+                origin_xyz="${coxa_dx} -${coxa_dy} -${coxa_dz}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/coxa_l.stl"
+                mesh_file="package://hexapod_description/meshes/coxa_l"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 2 (lf) thigh description -->
@@ -108,16 +121,19 @@
     <m_joint    name="${link_05_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
-                parent="${link_04_name}" child="${link_05_name}" />
+                origin_rpy="0 0 0"
+                origin_xyz="${coxa_dx - coxa_thigh_dx} ${coxa_dy - coxa_thigh_dy} -${coxa_dz - coxa_thigh_dz}" 
+                parent="${link_04_name}" 
+                child="${link_05_name}" />
 
     <m_link_mesh name="${link_05_name}"
-                origin_rpy="${pi/2} 0 ${pi}" origin_xyz="${thigh_dx} 0.002 -${thigh_dy}"
+                origin_rpy="${pi/2} 0 ${pi}"
+                origin_xyz="${thigh_dx} ${thigh_dz - coxa_thigh_dy} -${thigh_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/thigh.stl"
+                mesh_file="package://hexapod_description/meshes/thigh"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 2 (lf) tibia description -->
@@ -125,16 +141,19 @@
     <m_joint    name="${link_06_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="0.040 0 0" 
-                parent="${link_05_name}" child="${link_06_name}" />
+                origin_rpy="0 0 0"
+                origin_xyz="${thigh_dx * 2} ${thigh_dz - tibia_dz - 0.001} 0" 
+                parent="${link_05_name}"
+                child="${link_06_name}" />
 
     <m_link_mesh name="${link_06_name}"
-                origin_rpy="${3*pi/2} 0 0" origin_xyz="-${tibia_dx} -${thigh_dz - tibia_dz} ${tibia_dy}"
+                origin_rpy="${3*pi/2} 0 0"
+                origin_xyz="-${tibia_dx} -${thigh_dz - tibia_dz} ${tibia_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/tibia_l.stl"
+                mesh_file="package://hexapod_description/meshes/tibia_l"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 3 (rm) begin description -->
@@ -144,16 +163,19 @@
     <m_joint    name="${link_07_name}" 
                 type="revolute" 
                 axis_xyz="0 0 1"
-                origin_rpy="0 0 0" origin_xyz="-${body_legs_dx} ${body_legs_m_dy} -${coxa_dz - body_legs_dz}" 
-                parent="${link_00_name}" child="${link_07_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="-${body_legs_dx} ${body_legs_m_dy} -${coxa_dz - body_legs_dz}" 
+                parent="${link_00_name}" 
+                child="${link_07_name}" />
 
     <m_link_mesh name="${link_07_name}"
-                origin_rpy="${pi} 0 0" origin_xyz="-${coxa_dx} -${coxa_dy} 0"
+                origin_rpy="${pi} 0 0" 
+                origin_xyz="-${coxa_dx} -${coxa_dy} 0"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049"
                 iyy="0.0081915737" iyz="-0.000019223094"
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/coxa_r.stl"
+                mesh_file="package://hexapod_description/meshes/coxa_r"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 3 (rm) thigh description -->
@@ -161,16 +183,19 @@
     <m_joint    name="${link_08_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 ${pi}" origin_xyz="-0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
-                parent="${link_07_name}" child="${link_08_name}" />
+                origin_rpy="0 0 ${pi}" 
+                origin_xyz="-0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
+                parent="${link_07_name}" 
+                child="${link_08_name}" />
 
     <m_link_mesh name="${link_08_name}"
-                origin_rpy="${pi/2} 0 0" origin_xyz="${thigh_dx} -0.002 -${thigh_dy}"
+                origin_rpy="${pi/2} 0 0" 
+                origin_xyz="${thigh_dx} -0.002 -${thigh_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/thigh.stl"
+                mesh_file="package://hexapod_description/meshes/thigh"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 3 (rm) tibia description -->
@@ -178,16 +203,19 @@
     <m_joint    name="${link_09_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="0.040 0 0" 
-                parent="${link_08_name}" child="${link_09_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="0.040 0 0" 
+                parent="${link_08_name}" 
+                child="${link_09_name}" />
 
     <m_link_mesh name="${link_09_name}"
-                origin_rpy="${3*pi/2} 0 ${pi}" origin_xyz="-${tibia_dx} ${thigh_dz - tibia_dz} ${tibia_dy}"
+                origin_rpy="${3*pi/2} 0 ${pi}" 
+                origin_xyz="-${tibia_dx} ${thigh_dz - tibia_dz} ${tibia_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/tibia_r.stl"
+                mesh_file="package://hexapod_description/meshes/tibia_r"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 4 (lm) begin description -->
@@ -197,16 +225,19 @@
     <m_joint    name="${link_10_name}" 
                 type="revolute" 
                 axis_xyz="0 0 1"
-                origin_rpy="0 0 0" origin_xyz="${body_legs_dx} ${body_legs_m_dy} -${coxa_dz - body_legs_dz}" 
-                parent="${link_00_name}" child="${link_10_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="${body_legs_dx} ${body_legs_m_dy} -${coxa_dz - body_legs_dz}" 
+                parent="${link_00_name}" 
+                child="${link_10_name}" />
                 
     <m_link_mesh name="${link_10_name}"
-                origin_rpy="${pi} 0 0" origin_xyz="${coxa_dx} -${coxa_dy} 0"
+                origin_rpy="${pi} 0 0" 
+                origin_xyz="${coxa_dx} -${coxa_dy} 0"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/coxa_l.stl"
+                mesh_file="package://hexapod_description/meshes/coxa_l"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 4 (lm) thigh description -->
@@ -214,16 +245,19 @@
     <m_joint    name="${link_11_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
-                parent="${link_10_name}" child="${link_11_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
+                parent="${link_10_name}" 
+                child="${link_11_name}" />
 
     <m_link_mesh name="${link_11_name}"
-                origin_rpy="${pi/2} 0 ${pi}" origin_xyz="${thigh_dx} 0.002 -${thigh_dy}"
+                origin_rpy="${pi/2} 0 ${pi}" 
+                origin_xyz="${thigh_dx} 0.002 -${thigh_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/thigh.stl"
+                mesh_file="package://hexapod_description/meshes/thigh"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 4 (lm) tibia description -->
@@ -231,16 +265,19 @@
     <m_joint    name="${link_12_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="0.040 0 0" 
-                parent="${link_11_name}" child="${link_12_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="0.040 0 0" 
+                parent="${link_11_name}" 
+                child="${link_12_name}" />
 
     <m_link_mesh name="${link_12_name}"
-                origin_rpy="${3*pi/2} 0 0" origin_xyz="-${tibia_dx} -${thigh_dz - tibia_dz} ${tibia_dy}"
+                origin_rpy="${3*pi/2} 0 0" 
+                origin_xyz="-${tibia_dx} -${thigh_dz - tibia_dz} ${tibia_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/tibia_l.stl"
+                mesh_file="package://hexapod_description/meshes/tibia_l"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 5 (rr) begin description -->
@@ -250,16 +287,19 @@
     <m_joint    name="${link_13_name}" 
                 type="revolute" 
                 axis_xyz="0 0 1"
-                origin_rpy="0 0 0" origin_xyz="-${body_legs_dx} ${body_legs_r_dy} -${coxa_dz - body_legs_dz}" 
-                parent="${link_00_name}" child="${link_13_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="-${body_legs_dx} ${body_legs_r_dy} -${coxa_dz - body_legs_dz}" 
+                parent="${link_00_name}" 
+                child="${link_13_name}" />
 
     <m_link_mesh name="${link_13_name}"
-                origin_rpy="${pi} 0 0" origin_xyz="-${coxa_dx} -${coxa_dy} 0"
+                origin_rpy="${pi} 0 0" 
+                origin_xyz="-${coxa_dx} -${coxa_dy} 0"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049"
                 iyy="0.0081915737" iyz="-0.000019223094"
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/coxa_r.stl"
+                mesh_file="package://hexapod_description/meshes/coxa_r"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 5 (rr) thigh description -->
@@ -267,16 +307,19 @@
     <m_joint    name="${link_14_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 ${pi}" origin_xyz="-0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
-                parent="${link_13_name}" child="${link_14_name}" />
+                origin_rpy="0 0 ${pi}" 
+                origin_xyz="-0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
+                parent="${link_13_name}" 
+                child="${link_14_name}" />
 
     <m_link_mesh name="${link_14_name}"
-                origin_rpy="${pi/2} 0 0" origin_xyz="${thigh_dx} -0.002 -${thigh_dy}"
+                origin_rpy="${pi/2} 0 0" 
+                origin_xyz="${thigh_dx} -0.002 -${thigh_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/thigh.stl"
+                mesh_file="package://hexapod_description/meshes/thigh"
                 mesh_scale="0.001 0.001 0.001" />
     
     <!-- Leg 5 (rr) tibia description -->
@@ -284,16 +327,19 @@
     <m_joint    name="${link_15_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="0.040 0 0" 
-                parent="${link_14_name}" child="${link_15_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="0.040 0 0" 
+                parent="${link_14_name}" 
+                child="${link_15_name}" />
 
     <m_link_mesh name="${link_15_name}"
-                origin_rpy="${3*pi/2} 0 ${pi}" origin_xyz="-${tibia_dx} ${thigh_dz - tibia_dz} ${tibia_dy}"
+                origin_rpy="${3*pi/2} 0 ${pi}" 
+                origin_xyz="-${tibia_dx} ${thigh_dz - tibia_dz} ${tibia_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/tibia_r.stl"
+                mesh_file="package://hexapod_description/meshes/tibia_r"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 6 (lr) begin description -->
@@ -303,16 +349,19 @@
     <m_joint    name="${link_16_name}" 
                 type="revolute"
                 axis_xyz="0 0 1"
-                origin_rpy="0 0 0" origin_xyz="${body_legs_dx} ${body_legs_r_dy} -${coxa_dz - body_legs_dz}" 
-                parent="${link_00_name}" child="${link_16_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="${body_legs_dx} ${body_legs_r_dy} -${coxa_dz - body_legs_dz}" 
+                parent="${link_00_name}" 
+                child="${link_16_name}" />
                 
     <m_link_mesh name="${link_16_name}"
-                origin_rpy="${pi} 0 0" origin_xyz="${coxa_dx} -${coxa_dy} 0"
+                origin_rpy="${pi} 0 0" 
+                origin_xyz="${coxa_dx} -${coxa_dy} 0"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/coxa_l.stl"
+                mesh_file="package://hexapod_description/meshes/coxa_l"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 6 (lr) thigh description -->
@@ -320,16 +369,19 @@
     <m_joint    name="${link_17_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
-                parent="${link_16_name}" child="${link_17_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="0.025 ${coxa_thigh_dy} ${coxa_thigh_dz}" 
+                parent="${link_16_name}" 
+                child="${link_17_name}" />
 
     <m_link_mesh name="${link_17_name}"
-                origin_rpy="${pi/2} 0 ${pi}" origin_xyz="${thigh_dx} 0.002 -${thigh_dy}"
+                origin_rpy="${pi/2} 0 ${pi}" 
+                origin_xyz="${thigh_dx} 0.002 -${thigh_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/thigh.stl"
+                mesh_file="package://hexapod_description/meshes/thigh"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 6 (lr) tibia description -->
@@ -337,16 +389,19 @@
     <m_joint    name="${link_18_name}" 
                 type="revolute" 
                 axis_xyz="0 1 0"
-                origin_rpy="0 0 0" origin_xyz="0.040 0 0" 
-                parent="${link_17_name}" child="${link_18_name}" />
+                origin_rpy="0 0 0" 
+                origin_xyz="0.040 0 0" 
+                parent="${link_17_name}" 
+                child="${link_18_name}" />
 
     <m_link_mesh name="${link_18_name}"
-                origin_rpy="${3*pi/2} 0 0" origin_xyz="-${tibia_dx} -${thigh_dz - tibia_dz} ${tibia_dy}"
+                origin_rpy="${3*pi/2} 0 0" 
+                origin_xyz="-${tibia_dx} -${thigh_dz - tibia_dz} ${tibia_dy}"
                 mass="0.024357719"
                 ixx="0.0051411124" ixy="-0.00057530255" ixz="-0.000024729049" 
                 iyy="0.0081915737" iyz="-0.000019223094" 
                 izz="0.0011379812"
-                mesh_file="package://hexapod_description/meshes/tibia_l.stl"
+                mesh_file="package://hexapod_description/meshes/tibia_l"
                 mesh_scale="0.001 0.001 0.001" />
 
     <gazebo>
