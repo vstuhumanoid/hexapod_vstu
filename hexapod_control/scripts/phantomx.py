@@ -4,11 +4,13 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import JointState
 from std_msgs.msg import Float64
 
+# Python wrapper and helper class for hexapod control
+# Source: https://github.com/HumaRobotics/phantomx_gazebo
 
 class PhantomX:
     """Client ROS class for manipulating PhantomX in Gazebo"""
 
-    def __init__(self, ns='/phantomx/'):
+    def __init__(self, ns=''):
         self.ns = ns
         self.joints = None
         self.angles = None

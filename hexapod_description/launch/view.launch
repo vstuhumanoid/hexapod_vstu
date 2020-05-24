@@ -1,5 +1,5 @@
 <launch>
-
+    <!-- This helper launch file is used to view hexapod model in RViz-->
     <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find hexapod_description)/urdf/hexapod.xacro'" />
 
     <!-- Combine joint values -->
@@ -12,5 +12,4 @@
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
         <param name="use_gui" value="True" />
     </node>
-
 </launch>

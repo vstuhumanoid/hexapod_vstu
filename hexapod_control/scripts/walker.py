@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+# Hexapod walking gait generator
+# Generate simple periodic gait without FRUND
+# Source: https://github.com/HumaRobotics/phantomx_gazebo
+
 from threading import Thread
 import rospy
 import math
@@ -337,7 +341,7 @@ if __name__ == '__main__':
     rospy.sleep(1)
 
     rospy.loginfo('Instantiating Robot Client')
-    robot = PhantomX('/hexapod/')
+    robot = PhantomX()
     rospy.loginfo('Instantiating Robot Walker')
     walker = Walker(robot)
 

@@ -3,6 +3,8 @@
 import rospy
 from phantomx import PhantomX
 
+# Simple hexapod walking example
+# Source: https://github.com/HumaRobotics/phantomx_gazebo
 
 if __name__ == '__main__':
     rospy.init_node('walker_demo')

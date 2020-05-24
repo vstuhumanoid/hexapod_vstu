@@ -16,10 +16,10 @@ from visualization_msgs.msg import Marker
 from cv_bridge import CvBridge
 from message_filters import TimeSynchronizer, Subscriber
 
-IMAGE_TOPIC = '/image'
-CAMERA_INFO_TOPIC='/camera_info'
-MARKER_TOPIC='/direction'
-POS_TOPIC='/object'
+IMAGE_TOPIC = 'image'
+CAMERA_INFO_TOPIC='camera_info'
+MARKER_TOPIC='direction'
+POS_TOPIC='object'
 FRAME='base_link'
 
 def init_argparse():
