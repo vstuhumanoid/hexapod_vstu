@@ -1,0 +1,153 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    background-color: #000000;
+    color: #ffffff;
+    /* Settings */
+    --button-radius: min(8vw, 15vmin);
+    --font: min(2em, min(5vw, 5vh));
+}
+
+@font-face {
+    font-family: GillSans;
+    src: url(/fonts/GillSans-Light.ttf);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0, auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.params {
+    padding: 5vh;
+    font-family: GillSans;
+    text-align: right;
+    font-size: var(--font);
+}
+
+.param {
+    width: 1em;
+    text-align: center;
+}
+
+.minusplus {
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    vertical-align: center;
+    margin: 0 0.5em;
+}
+
+.minus {
+    background-image: url(/svg/Button-.svg);
+}
+
+.plus {
+    background-image: url(/svg/Button+.svg);
+}
+
+.minusplus:active, .joystick-key:active, .homepos:active {
+    filter: sepia(40%) saturate(2000%)
+}
+
+.joystick {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.joystick-key {
+    background-size: contain;
+    display: block;
+    height: var(--button-radius);
+    width: var(--button-radius);
+}
+
+.joystick-space {
+    min-width: var(--button-radius);
+}
+
+.pad {
+    display: inline-block;
+}
+
+.pad-left {
+    margin-left: calc(var(--button-radius) / 2);
+}
+
+.pad-right {
+    margin-right: calc(var(--button-radius) / 2);
+}
+
+.pad-sep {
+    width: calc(var(--button-radius)/4);
+}
+
+.joystick-space {
+    width: var(--button-radius);
+}
+
+/*  */
+
+.buttondyp {
+    background-image: url(/svg/DY+.svg);
+}
+
+.buttondzp {
+    background-image: url(/svg/DZ+.svg);
+}
+
+.buttondxm {
+    background-image: url(/svg/DX-.svg);
+}
+
+.buttondxp {
+    background-image: url(/svg/DX+.svg);
+}
+
+.buttondym {
+    background-image: url(/svg/DY-.svg);
+}
+
+.buttondzm {
+    background-image: url(/svg/DZ-.svg);
+}
+
+/*  */
+
+.buttonduyp {
+    background-image: url(/svg/DUY+.svg);
+}
+
+.buttonduzp {
+    background-image: url(/svg/DUZ+.svg);
+}
+
+.buttonduxm {
+    background-image: url(/svg/DUX-.svg);
+}
+
+.buttonduxp {
+    background-image: url(/svg/DUX+.svg);
+}
+
+.buttonduym {
+    background-image: url(/svg/DUY-.svg);
+}
+
+.buttonduzm {
+    background-image: url(/svg/DUZ-.svg);
+}

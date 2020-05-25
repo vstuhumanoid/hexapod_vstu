@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="/vue.js"></script>
+    <script type="text/javascript" src="/roslib.min.js"></script>
+    <script type="module" src="/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale = 1">
+    <title>Hexapod</title>
+</head>
+
+<body ontouchstart="">
+    <div class="container">
+        <table class="params">
+            <tr>
+                <td>Длина шага:</td>
+                <td><span @click="params.stride_length--; send();" class="minusplus minus"></span></td>
+                <td class="param">{{params.stride_length}}</td>
+                <td><span @click="params.stride_length++; send();" class="minusplus plus"></span></td>
+            </tr>
+            <tr>
+                <td>Высота шага:</td>
+                <td><span @click="params.step_height--; send();" class="minusplus minus"></span></td>
+                <td class="param">{{params.step_height}}</td>
+                <td><span @click="params.step_height++; send();" class="minusplus plus"></span></td>
+            </tr>
+            <tr>
+                <td>Переброс/опора:</td>
+                <td><span @click="params.overshoot_support--; send();" class="minusplus minus"></span></td>
+                <td class="param">{{params.overshoot_support}}</td>
+                <td><span @click="params.overshoot_support++; send();" class="minusplus plus"></span></td>
+            </tr>
+            <tr>
+                <td>Стопа/кузов:</td>
+                <td><span @click="params.foot_body--; send();" class="minusplus minus"></span></td>
+                <td class="param">{{params.foot_body}}</td>
+                <td><span @click="params.foot_body++; send();" class="minusplus plus"></span></td>
+            </tr>
+            <tr>
+                <td>Тип походки:</td>
+                <td><span @click="params.gait_type--; send();" class="minusplus minus"></span></td>
+                <td class="param">{{params.gait_type}}</td>
+                <td><span @click="params.gait_type++; send();" class="minusplus plus"></span></td>
+            </tr>
+        </table>
+
+        <div class="joystick">
+            <table class="pad pad-left">
+                <tr>
+                    <td></td>
+                    <td><span @click="params.vy++; send();" class="joystick-key buttondyp"></span></td>
+                    <td></td>
+                    <td class="pad-sep"></td>
+                    <td><span @click="params.vz++; send();" class="joystick-key buttondzp"></span></td>
+                </tr>
+                <tr>
+                    <td><span @click="params.vx--; send();" class="joystick-key buttondxm"></span></td>
+                    <td></td>
+                    <td><span @click="params.vx++; send();" class="joystick-key buttondxp"></span></td>
+                    <td class="pad-sep"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span @click="params.vy--; send();" class="joystick-key buttondym"></span></td>
+                    <td></td>
+                    <td class="pad-sep"></td>
+                    <td><span @click="params.vz--; send();" class="joystick-key buttondzm"></span></td>
+                </tr>
+            </table>
+            <div class="joystick-space"></div>
+            <table class="pad pad-right">
+                <tr>
+                    <td></td>
+                    <td><span @click="params.vux++; send();" class="joystick-key buttonduxp"></span></td>
+                    <td></td>
+                    <td class="pad-sep"></td>
+                    <td><span @click="params.vuz--; send();" class="joystick-key buttonduzm"></span></td>
+                </tr>
+                <tr>
+                    <td><span @click="params.vuy--; send();" class="joystick-key buttonduym"></span></td>
+                    <td></td>
+                    <td><span @click="params.vuy++; send();" class="joystick-key buttonduyp"></span></td>
+                    <td class="pad-sep"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span @click="params.vux--; send();" class="joystick-key buttonduxm"></span></td>
+                    <td></td>
+                    <td class="pad-sep"></td>
+                    <td><span @click="params.vuz++; send();" class="joystick-key buttonduzp"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

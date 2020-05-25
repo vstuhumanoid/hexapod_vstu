@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hexapod_remote_control</name>
+  <version>0.0.0</version>
+  <description>Remote controller for Hexapod</description>
+
+  <maintainer email="garrus@todo.todo">garrus</maintainer>
+
+  <license>TODO</license>
+
+  <author email="jane.doe@example.com">Jane Doe</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <!-- TODO: web as exec depends -->
+
+  <export>
+  </export>
+</package>
