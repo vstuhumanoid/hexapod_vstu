@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+    <node name="server" pkg="hexapod_remote_control" type="server.sh"
+        args="$(find hexapod_remote_control)/rc_web" output="screen"/>
+</launch>
