@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   genmsg
+  hexapod_msgs
 )
 
 catkin_python_setup()
@@ -30,6 +31,6 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(${PROJECT_NAME}_node src/hexapod_control_node.cpp)
-target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES})
-add_dependencies(${PROJECT_NAME}_node hexapod_control_generate_messages_cpp)
+add_executable(hexapod_control_node src/hexapod_control_node.cpp)
+target_link_libraries(hexapod_control_node ${catkin_LIBRARIES})
+add_dependencies(hexapod_control_node hexapod_control_generate_messages_cpp)

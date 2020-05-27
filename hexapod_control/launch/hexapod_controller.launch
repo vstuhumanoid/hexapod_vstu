@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+  <group ns="hexapod">
+    <!-- spawn hexapod -->
+    <include file="$(find hexapod_description)/launch/spawn.launch"/>
+    <include file="$(find hexapod_control)/launch/init_ros_control.launch"/>
+    <node name="hexapod_control_node" 
+          pkg="hexapod_control" 
+          type="hexapod_control_node" 
+          output="screen" />
+
+    <param name="frund_port" value="55556" />
+
+    <rosparam param="hexapod_joints_numbers_map">
+      {
+        "j_c1_lf" : 1,
+        "j_c1_lm" : 7,
+        "j_c1_lr" : 13,
+        "j_c1_rf" : 4,
+        "j_c1_rm" : 10, 
+        "j_c1_rr" : 16,
+        "j_thigh_lf" : 2,
+        "j_thigh_lm" : 8,
+        "j_thigh_lr" : 14,
+        "j_thigh_rf" : 5,
+        "j_thigh_rm" : 11,
+        "j_thigh_rr" : 17,
+        "j_tibia_lf" : 3,
+        "j_tibia_lm" : 9,
+        "j_tibia_lr" : 15,
+        "j_tibia_rf" : 6,
+        "j_tibia_rm" : 12,
+        "j_tibia_rr" : 18
+      }
+    </rosparam>
+
+    <rosparam param="hexapod_joints_inversion_map">
+      {
+        "j_c1_lf" : false,
+        "j_c1_lm" : false,
+        "j_c1_lr" : false,
+        "j_c1_rf" : false,
+        "j_c1_rm" : false, 
+        "j_c1_rr" : false,
+        "j_thigh_lf" : false,
+        "j_thigh_lm" : false,
+        "j_thigh_lr" : false,
+        "j_thigh_rf" : true,
+        "j_thigh_rm" : true,
+        "j_thigh_rr" : true,
+        "j_tibia_lf" : false,
+        "j_tibia_lm" : false,
+        "j_tibia_lr" : false,
+        "j_tibia_rf" : true,
+        "j_tibia_rm" : true,
+        "j_tibia_rr" : true
+      }
+    </rosparam>
+  </group>
+</launch>
