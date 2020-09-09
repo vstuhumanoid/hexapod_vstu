@@ -80,32 +80,32 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        c1_lf:
+        coxa_lf:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        c1_lm:
+        coxa_lm:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        c1_lr:
+        coxa_lr:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        c1_rf:
+        coxa_rf:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        c1_rm:
+        coxa_rm:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        c1_rr:
+        coxa_rr:
           Alpha: 1
           Show Axes: false
           Show Trail: false

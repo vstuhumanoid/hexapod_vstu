@@ -9,12 +9,12 @@
             respawn="False" output="screen"
             args="
             joint_state_controller
-            j_c1_lf_position_controller
-            j_c1_rf_position_controller
-            j_c1_lm_position_controller
-            j_c1_rm_position_controller
-            j_c1_lr_position_controller
-            j_c1_rr_position_controller
+            j_coxa_lf_position_controller
+            j_coxa_rf_position_controller
+            j_coxa_lm_position_controller
+            j_coxa_rm_position_controller
+            j_coxa_lr_position_controller
+            j_coxa_rr_position_controller
             j_thigh_lf_position_controller
             j_thigh_rf_position_controller
             j_thigh_lm_position_controller

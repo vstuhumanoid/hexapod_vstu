@@ -43,28 +43,50 @@
                 <td><span @click="params.gait_type--; send();" class="minusplus minus"></span></td>
                 <td class="param">{{params.gait_type}}</td>
                 <td><span @click="params.gait_type++; send();" class="minusplus plus"></span></td>
-            </tr>
+            </tr>  
         </table>
+        <!-- <table class="params">
+            <tr>
+                <td>Linear x</td>
+                <td>Linear y</td>
+                <td>Linear z</td>
+            </tr>
+            <tr>
+                <td class="param">{{params.vx}}</td>
+                <td class="param">{{params.vy}}</td>
+                <td class="param">{{params.vz}}</td>
+            </tr>
+            <tr>
+                <td>Angular x</td>
+                <td>Angular y</td>
+                <td>Angular z</td>
+            </tr>
+            <tr>
+                <td class="param">{{params.vux}}</td>
+                <td class="param">{{params.vuy}}</td>
+                <td class="param">{{params.vuz}}</td>
+            </tr>
+        </table> -->
 
         <div class="joystick">
             <table class="pad pad-left">
                 <tr>
                     <td></td>
-                    <td><span @click="params.vy++; send();" class="joystick-key buttondyp"></span></td>
+                    <td><span @click="params.vx++; send();" class="joystick-key buttondyp"></span></td>
                     <td></td>
                     <td class="pad-sep"></td>
                     <td><span @click="params.vz++; send();" class="joystick-key buttondzp"></span></td>
                 </tr>
                 <tr>
-                    <td><span @click="params.vx--; send();" class="joystick-key buttondxm"></span></td>
+                    <td><span @click="params.vy--; send();" class="joystick-key buttondxm"></span></td>
                     <td></td>
-                    <td><span @click="params.vx++; send();" class="joystick-key buttondxp"></span></td>
+                    <td><span @click="params.vy++; send();" class="joystick-key buttondxp"></span></td>
                     <td class="pad-sep"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><span @click="params.vy--; send();" class="joystick-key buttondym"></span></td>
+                    <td><span @click="params.vx--; send();" class="joystick-key buttondym"></span></td>
                     <td></td>
                     <td class="pad-sep"></td>
                     <td><span @click="params.vz--; send();" class="joystick-key buttondzm"></span></td>

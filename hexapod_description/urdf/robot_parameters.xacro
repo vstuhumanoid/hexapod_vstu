@@ -1,53 +1,80 @@
 <?xml version="1.0" ?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Links list -->
     <xacro:property name="link_00_name" value="body" />
 
-    <xacro:property name="link_01_name" value="c1_rf" />
+    <xacro:property name="link_01_name" value="coxa_rf" />
     <xacro:property name="link_02_name" value="thigh_rf" />
     <xacro:property name="link_03_name" value="tibia_rf" />
 
-    <xacro:property name="link_04_name" value="c1_lf" />
+    <xacro:property name="link_04_name" value="coxa_lf" />
     <xacro:property name="link_05_name" value="thigh_lf" />
     <xacro:property name="link_06_name" value="tibia_lf" />
 
-    <xacro:property name="link_07_name" value="c1_rm" />
+    <xacro:property name="link_07_name" value="coxa_rm" />
     <xacro:property name="link_08_name" value="thigh_rm" />
     <xacro:property name="link_09_name" value="tibia_rm" />
 
-    <xacro:property name="link_10_name" value="c1_lm" />
+    <xacro:property name="link_10_name" value="coxa_lm" />
     <xacro:property name="link_11_name" value="thigh_lm" />
     <xacro:property name="link_12_name" value="tibia_lm" />
 
-    <xacro:property name="link_13_name" value="c1_rr" />
+    <xacro:property name="link_13_name" value="coxa_rr" />
     <xacro:property name="link_14_name" value="thigh_rr" />
     <xacro:property name="link_15_name" value="tibia_rr" />
 
-    <xacro:property name="link_16_name" value="c1_lr" />
+    <xacro:property name="link_16_name" value="coxa_lr" />
     <xacro:property name="link_17_name" value="thigh_lr" />
     <xacro:property name="link_18_name" value="tibia_lr" />
 
-    <!-- Attachments params -->
+    <!-- Inertia params-->
+    <xacro:property name="i_div" value="1000.0"/>
+    <!-- Body params -->
     
-    <xacro:property name="body_legs_f_dy" value="-0.066" />
-    <xacro:property name="body_legs_m_dy" value="0.006" />
-    <xacro:property name="body_legs_r_dy" value="0.078" />
-    <xacro:property name="body_legs_dx" value="0.04" />
-    <xacro:property name="body_legs_dz" value="0.0203" />
+    <xacro:property name="body_legs_f_dx" value="0.066" />
+    <xacro:property name="body_legs_m_dx" value="-0.006" />
+    <xacro:property name="body_legs_r_dx" value="-0.078" />
+    <xacro:property name="body_legs_dy" value="0.04" />
+    <xacro:property name="body_legs_dz" value="0.0243" />
 
-    <xacro:property name="coxa_dx" value="0.033" />
-    <xacro:property name="coxa_dy" value="0.007" />
-    <xacro:property name="coxa_dz" value="0.0315" />
+    <!-- Center of Mass position-->
+    <xacro:property name="body_com_x" value="-0.000465" />
+    <xacro:property name="body_com_y" value="0" />
+    <xacro:property name="body_com_z" value="0.006191" />
 
-    <xacro:property name="coxa_thigh_dx" value="0.008" />
-    <xacro:property name="coxa_thigh_dy" value="0.0123" />
-    <xacro:property name="coxa_thigh_dz" value="0.011" />
+    <!-- Coxa params -->
+    <xacro:property name="coxa_dx" value="0.007" />
+    <xacro:property name="coxa_dy" value="0.033" />
+    <xacro:property name="coxa_dz" value="0.0025" />
 
-    <xacro:property name="thigh_dx" value="0.02" />
-    <xacro:property name="thigh_dy" value="0.007" />
-    <xacro:property name="thigh_dz" value="0.032" />
+    <xacro:property name="coxa_thigh_dx" value="0.0123" />
+    <xacro:property name="coxa_thigh_dy" value="0.008" />
+    <xacro:property name="coxa_thigh_dz" value="0.023" />
 
-    <xacro:property name="tibia_dx" value="0.008" />
-    <xacro:property name="tibia_dy" value="0.023" />
-    <xacro:property name="tibia_dz" value="0.0123" />
+    <!-- Center of Mass position-->
+    <xacro:property name="coxa_com_x" value="-0.005038" />
+    <xacro:property name="coxa_com_y" value="0.010896" />
+    <xacro:property name="coxa_com_z" value="-0.01694" />
+
+    <!-- Thigh params -->
+    <xacro:property name="thigh_dx" value="0.01525" />
+    <xacro:property name="thigh_dy" value="0.02" />
+    <xacro:property name="thigh_dz" value="0" />
+
+    <!-- Center of Mass position-->
+    <xacro:property name="thigh_com_x" value="0.00504" />
+    <xacro:property name="thigh_com_y" value="0" />
+    <xacro:property name="thigh_com_z" value="-0.000293" />
+
+    <!-- Tibia params -->
+    <xacro:property name="tibia_dx" value="0.0123" />
+    <xacro:property name="tibia_dy" value="0" />
+    <xacro:property name="tibia_dz" value="0.023" />
+
+    <!-- Center of Mass position-->
+    <xacro:property name="tibia_com_x" value="-0.00471" />
+    <xacro:property name="tibia_com_y" value="0" />
+    <xacro:property name="tibia_com_z" value="-0.025056" />
 </robot>

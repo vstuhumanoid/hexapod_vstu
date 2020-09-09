@@ -12,7 +12,7 @@
     <joint name="hexapod_attachment" type="fixed">
         <parent link="base_link"/>
         <child link="body"/>
-        <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
     </joint>
 
     <xacro:my_camera/>
@@ -23,53 +23,54 @@
       <child link="camera_link"/>
     </joint>
 
-    <m_link_mesh name="body"
+    <simple_mesh_link name="body"
                 origin_rpy="0 0 0" 
                 origin_xyz="0 0 0"
-                mass="0.97559947"
-                ixx="3.1081800" ixy="-0.25460189" ixz="2.0318174"
-                iyy="6.3787776" iyz="0.16417863"
-                izz="5.3316425"
+                com_xyz="${body_com_x} ${body_com_y} ${body_com_z}"
+                mass="0.1"
+                ixx="${0.140413 / i_div}" ixy="${0 / i_div}" ixz="${0.000026 / i_div}"
+                iyy="${0.378107 / i_div}" iyz="${0 / i_div}"
+                izz=" ${0.512999 /i_div}"
                 mesh_file="package://hexapod_description/meshes/body"
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 1 (rf) description -->
-    <m_leg_r    body_leg_dy="${body_legs_f_dy}"
+    <leg_r    body_leg_dx="${body_legs_f_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_01_name}"
                 thigh_link_name="${link_02_name}"
                 tibia_link_name="${link_03_name}" />
 
     <!-- Leg 2 (lf) description -->
-    <m_leg_l    body_leg_dy="${body_legs_f_dy}"
+    <leg_l    body_leg_dx="${body_legs_f_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_04_name}"
                 thigh_link_name="${link_05_name}"
                 tibia_link_name="${link_06_name}" />
 
     <!-- Leg 3 (rm) description -->
-    <m_leg_r    body_leg_dy="${body_legs_m_dy}"
+    <leg_r    body_leg_dx="${body_legs_m_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_07_name}"
                 thigh_link_name="${link_08_name}"
                 tibia_link_name="${link_09_name}" />
  
     <!-- Leg 4 (lm) description -->
-    <m_leg_l    body_leg_dy="${body_legs_m_dy}"
+    <leg_l    body_leg_dx="${body_legs_m_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_10_name}"
                 thigh_link_name="${link_11_name}"
                 tibia_link_name="${link_12_name}" />
 
     <!-- Leg 5 (rr) description -->
-    <m_leg_r    body_leg_dy="${body_legs_r_dy}"
+    <leg_r    body_leg_dx="${body_legs_r_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_13_name}"
                 thigh_link_name="${link_14_name}"
                 tibia_link_name="${link_15_name}" />
  
     <!-- Leg 6 (lr) description -->
-    <m_leg_l    body_leg_dy="${body_legs_r_dy}"
+    <leg_l    body_leg_dx="${body_legs_r_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_16_name}"
                 thigh_link_name="${link_17_name}"

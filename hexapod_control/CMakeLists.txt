@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(hexapod_control)
 
-## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11)
+set(CMAKE_CXX_STANDARD 14)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy
@@ -31,6 +30,11 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(hexapod_control_node src/hexapod_control_node.cpp)
+add_executable(
+  hexapod_control_node 
+  src/hexapod_control_node.cpp 
+  src/hexapod_controller.cpp
+  src/frund_gateway.cpp)
+  
 target_link_libraries(hexapod_control_node ${catkin_LIBRARIES})
 add_dependencies(hexapod_control_node hexapod_control_generate_messages_cpp)

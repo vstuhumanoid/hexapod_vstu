@@ -29,7 +29,7 @@ window.onload = function () {
                     console.log('Connected to websocket server.');
                     this.frund_control = new ROSLIB.Topic({
                         ros : this.ros,
-                        name : 'frund_commands',
+                        name : '/hexapod/walk_params/',
                         messageType : 'hexapod_msgs/FrundControl'
                     });
                 }.bind(this));
@@ -70,7 +70,7 @@ window.onload = function () {
                         step_length : this.params.stride_length,
                         step_height : this.params.step_height,
                         support_movement : this.params.overshoot_support,
-                        foot_body_ratio : this.params.food_body,
+                        foot_body_ratio : this.params.foot_body,
                         gait_type:  this.params.gait_type
                     }
                 });
