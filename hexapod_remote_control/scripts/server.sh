@@ -6,5 +6,4 @@ if [ ! -z $1 ]; then
 fi
 # python -m SimpleHTTPServer
 
-
 browser-sync start --server 'rc_web' --files 'rc_web'
