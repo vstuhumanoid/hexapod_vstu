@@ -10,7 +10,7 @@
 
         <!-- Coxa description -->
 
-        <simple_joint name="${coxa_link_name}" 
+        <xacro:simple_joint name="${coxa_link_name}" 
                     type="revolute"
                     axis_xyz="0 0 1"
                     origin_rpy="0 0 0"
@@ -18,7 +18,7 @@
                     parent="${body_link_name}"
                     child="${coxa_link_name}" />
 
-        <simple_mesh_link name="${coxa_link_name}"
+        <xacro:simple_mesh_link name="${coxa_link_name}"
                     origin_rpy="0 0 0" 
                     origin_xyz="${coxa_dx} ${coxa_dy} ${coxa_dz}"
                     com_xyz="${coxa_com_x + coxa_dx} ${-coxa_com_y + coxa_dy} ${coxa_com_z + coxa_dz}"
@@ -31,7 +31,7 @@
 
         <!-- Thigh description -->
 
-        <simple_joint    name="${thigh_link_name}" 
+        <xacro:simple_joint    name="${thigh_link_name}" 
                     type="revolute" 
                     axis_xyz="1 0 0"
                     origin_rpy="0 ${pi} 0"
@@ -39,7 +39,7 @@
                     parent="${coxa_link_name}" 
                     child="${thigh_link_name}" />
 
-        <simple_mesh_link name="${thigh_link_name}"
+        <xacro:simple_mesh_link name="${thigh_link_name}"
                     origin_rpy="0 ${pi} 0"
                     origin_xyz="${thigh_dx} ${thigh_dy} ${thigh_dz}"
                     com_xyz="${-thigh_com_x + thigh_dx} ${thigh_com_y + thigh_dy} ${thigh_com_z}"
@@ -52,7 +52,7 @@
 
         <!-- Leg 2 (lf) tibia description -->
 
-        <simple_joint    name="${tibia_link_name}" 
+        <xacro:simple_joint    name="${tibia_link_name}" 
                     type="revolute" 
                     axis_xyz="1 0 0"
                     origin_rpy="0 0 0"
@@ -60,7 +60,7 @@
                     parent="${thigh_link_name}"
                     child="${tibia_link_name}" />
 
-        <simple_mesh_link name="${tibia_link_name}"
+        <xacro:simple_mesh_link name="${tibia_link_name}"
                     origin_rpy="0 ${pi} 0"
                     origin_xyz="${tibia_dx} ${-tibia_dy} ${-tibia_dz}"
                     com_xyz="${-tibia_com_x + tibia_dx} ${tibia_com_y - tibia_dy} ${tibia_com_z + tibia_dz}"
@@ -78,7 +78,7 @@
 
         <!-- Coxa description -->
 
-        <simple_joint    name="${coxa_link_name}" 
+        <xacro:simple_joint    name="${coxa_link_name}" 
                     type="revolute" 
                     axis_xyz="0 0 1"
                     origin_rpy="0 0 0" 
@@ -86,7 +86,7 @@
                     parent="${body_link_name}"
                     child="${coxa_link_name}" />
 
-        <simple_mesh_link name="${coxa_link_name}"
+        <xacro:simple_mesh_link name="${coxa_link_name}"
                     origin_rpy="0 0 0" 
                     origin_xyz="${coxa_dx} -${coxa_dy} ${coxa_dz}"
                     com_xyz="${coxa_com_x + coxa_dx} ${coxa_com_y - coxa_dy} ${coxa_com_z + coxa_dz}"
@@ -99,7 +99,7 @@
 
         <!-- Thigh description -->
 
-        <simple_joint    name="${thigh_link_name}" 
+        <xacro:simple_joint    name="${thigh_link_name}" 
                     type="revolute" 
                     axis_xyz="1 0 0"
                     origin_rpy="0 0 0" 
@@ -107,7 +107,7 @@
                     parent="${coxa_link_name}" 
                     child="${thigh_link_name}" />
 
-        <simple_mesh_link name="${thigh_link_name}"
+        <xacro:simple_mesh_link name="${thigh_link_name}"
                     origin_rpy="0 0 0" 
                     origin_xyz="${-thigh_dx} ${-thigh_dy} ${-thigh_dz}"
                     com_xyz="${thigh_com_x - thigh_dx} ${thigh_com_y - thigh_dy} ${thigh_com_z}"
@@ -120,7 +120,7 @@
 
         <!-- Tibia description -->
 
-        <simple_joint    name="${tibia_link_name}" 
+        <xacro:simple_joint    name="${tibia_link_name}" 
                     type="revolute" 
                     axis_xyz="1 0 0"
                     origin_rpy="0 0 0" 
@@ -128,7 +128,7 @@
                     parent="${thigh_link_name}" 
                     child="${tibia_link_name}" />
 
-        <simple_mesh_link name="${tibia_link_name}"
+        <xacro:simple_mesh_link name="${tibia_link_name}"
                     origin_rpy="0 0 0" 
                     origin_xyz="${-tibia_dx} ${tibia_dy} ${tibia_dz}"
                     com_xyz="${tibia_com_x - tibia_dx} ${tibia_com_y - tibia_dy} ${tibia_com_z + tibia_dz}"

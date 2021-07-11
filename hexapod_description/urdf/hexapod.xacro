@@ -23,7 +23,7 @@
       <child link="camera_link"/>
     </joint>
 
-    <simple_mesh_link name="body"
+    <xacro:simple_mesh_link name="body"
                 origin_rpy="0 0 0" 
                 origin_xyz="0 0 0"
                 com_xyz="${body_com_x} ${body_com_y} ${body_com_z}"
@@ -35,42 +35,42 @@
                 mesh_scale="0.001 0.001 0.001" />
 
     <!-- Leg 1 (rf) description -->
-    <leg_r    body_leg_dx="${body_legs_f_dx}"
+    <xacro:leg_r    body_leg_dx="${body_legs_f_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_01_name}"
                 thigh_link_name="${link_02_name}"
                 tibia_link_name="${link_03_name}" />
 
     <!-- Leg 2 (lf) description -->
-    <leg_l    body_leg_dx="${body_legs_f_dx}"
+    <xacro:leg_l    body_leg_dx="${body_legs_f_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_04_name}"
                 thigh_link_name="${link_05_name}"
                 tibia_link_name="${link_06_name}" />
 
     <!-- Leg 3 (rm) description -->
-    <leg_r    body_leg_dx="${body_legs_m_dx}"
+    <xacro:leg_r    body_leg_dx="${body_legs_m_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_07_name}"
                 thigh_link_name="${link_08_name}"
                 tibia_link_name="${link_09_name}" />
  
     <!-- Leg 4 (lm) description -->
-    <leg_l    body_leg_dx="${body_legs_m_dx}"
+    <xacro:leg_l    body_leg_dx="${body_legs_m_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_10_name}"
                 thigh_link_name="${link_11_name}"
                 tibia_link_name="${link_12_name}" />
 
     <!-- Leg 5 (rr) description -->
-    <leg_r    body_leg_dx="${body_legs_r_dx}"
+    <xacro:leg_r    body_leg_dx="${body_legs_r_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_13_name}"
                 thigh_link_name="${link_14_name}"
                 tibia_link_name="${link_15_name}" />
  
     <!-- Leg 6 (lr) description -->
-    <leg_l    body_leg_dx="${body_legs_r_dx}"
+    <xacro:leg_l    body_leg_dx="${body_legs_r_dx}"
                 body_link_name="${link_00_name}"
                 coxa_link_name="${link_16_name}"
                 thigh_link_name="${link_17_name}"
@@ -80,7 +80,7 @@
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
         </plugin>
 
-        <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <!-- <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
             <alwaysOn>true</alwaysOn>
             <updateRate>50.0</updateRate>
             <bodyName>base_link</bodyName>
@@ -89,7 +89,7 @@
             <frameName>world</frameName>
             <xyzOffsets>0 0 0</xyzOffsets>
             <rpyOffsets>0 0 0</rpyOffsets>
-        </plugin>
+        </plugin> -->
 
     </gazebo>
 
